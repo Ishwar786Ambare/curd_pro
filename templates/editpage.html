@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+{% block content %}
+    <form action="{% url 'update' student.id %}" method="post">
+    {% csrf_token %}
+        <label for="">Roll number</label>
+        <input type="number" name="roll_no" value="{{ student.student_roll_no }}">
+        <label for="">first name</label>
+        <input type="text" name="first_name" value="{{ student.student_last_name }}">
+        <label for="">last name</label>
+        <input type="text" name="roll_no" value="{{ student.student_last_name }}">
+    </form>
+<center>
+    <a href="{% url 'update' student.id %}"><input class="btn btn-success" type="submit" value="Update"></a>
+</center>
+{% endblock %}

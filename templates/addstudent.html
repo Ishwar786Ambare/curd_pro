@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+{% block content %}
+    <div class="container">
+        <form action="">
+            {% csrf_token %}
+
+            <label >Roll No :</label>
+            <input type="number" name="roll_no"><br>
+
+            <label>Name    :</label>
+            <input type="text" name="first_name"><br>
+
+            <label>Last    :</label>
+            <input type="text" name="roll_no"><br>
+
+            <a href="{% url 'add' %}"> <button class="button" type="submit">Add</button></a>
+
+        </form>
+    </div>
+{% endblock %}

@@ -13,11 +13,37 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from curdapp import views
+# from django.contrib import admin
+# from django.urls import path
+# from curdapp import views
+#
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', views.home_page),
+#     path('add/', views.add_student_view,name='add'),
+#     path('create/', views.save_data_view,name='create'),
+#     path('edit/<id>', views.edit_view,name='edit'),
+#     path('update/<id>', views.update_view,name='update'),
+#     path('delete/<id>', views.delete_view,name='delete'),
+# ]
 
+
+# from django.contrib import admin
+# from django.urls import path
+# from employee import views
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('emp/', views.emp),
+#     path('show/',views.show),
+#     path('edit/<int:id>', views.edit),
+#     path('update/<int:id>', views.update),
+#     path('delete/<int:id>', views.destroy),
+# ]
+
+from django.contrib import admin
+from django.urls import path, include
+#DataFlair
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home_page),
+    path('', include('books.urls'))
 ]

@@ -9,6 +9,8 @@
                     <td>Id</td>
                     <td>Name</td>
                     <td>Last</td>
+                    <td>Action</td>
+                    <td>Action</td>
                 </tr>
                 </thead>
                 <tbody class="table-light">
@@ -17,10 +19,13 @@
                         <td>{{ student.student_roll_no }}</td>
                         <td>{{ student.student_first_name }}</td>
                         <td>{{ student.student_last_name }}</td>
+                        <td><a href="{% url 'edit' student.id %}">Edit</a></td>
+                        <td><a href="{% url 'delete' student.id %}">Delete</a></td>
                     </tr>
-                {% endfor %}
+                {% endfor %}x
                 </tbody>
             </table>
+            <button data-actions-icnt=""><a class="button" href="{% url 'add' %}">Add Student</a></button>
         </div>
     </div>
 
