@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+{% block content %}
+    <div class="jumbotron">
+
+        <div class="container">
+            <table class="container table-danger table-bordered">
+                <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Last</td>
+                </tr>
+                </thead>
+                <tbody class="table-light">
+                {% for student in students %}
+                    <tr>
+                        <td>{{ student.student_roll_no }}</td>
+                        <td>{{ student.student_first_name }}</td>
+                        <td>{{ student.student_last_name }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
